@@ -1,0 +1,145 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin-top: -16px;
+    width: 100%;
+    min-height: 100vh;
+    background: url('./assets/images/bg.jpg') no-repeat center top/100% 115%;
+
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    background: url('./assets/images/nav-bg.png') no-repeat center top;
+}
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* position: relative; */
+}
+
+.menu-right {
+    padding-bottom: 20px;
+}
+
+.menu-right a {
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .5s ease-in-out;
+}
+
+.menu-right a:hover {
+    color: rgb(117, 117, 11);
+}
+
+.logo {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home-desktop {
+   margin-right: 30px;
+}
+
+.fb-desktop {
+   
+}
+
+.home {
+    display: none;
+}
+
+.facebook {
+    display: none;
+}
+
+.content {
+    margin-top: 125px;
+}
+
+.content-main {
+    display: flex;
+}
+
+.flipster__button{
+    top: 30px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+       background: url('./assets//images/bg-mobile.jpg') no-repeat center top/100% 100%;
+    }
+    .header {
+       padding: 0;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .logo {
+        width: 150px;
+        height: auto;
+        position: static;
+        transform: translate(0);
+    }
+    .logo img {
+        width: 100%;
+    }
+    .menu-right a {
+        list-style: none;
+        color: white;
+        font-size: 20px;
+    }
+    .home {
+        margin-right: 40px;
+        display: inline;
+    }
+    .facebook {
+        display: inline;
+    }
+    .home-desktop {
+        display: none;
+    }
+    .fb-desktop {
+        display: none;
+    }
+    .content {
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="https://st1.cmn.vn/games/truyen-thuyet/images/16x16.jpg?ver=3.8" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.2/jquery.flipster.css" integrity="sha512-YSNWyoPeQiu9Mgelm4Qhd0Ne+y35DPM9vocIjp24BZ+lOLZsKxMdExAXLhKNiBJ7j4NZUk4lGaAlNXxET4aiRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <ul class="menu">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./assets/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="menu-right">
+                        <a class="home-desktop" href="#">Trang chủ</a>
+                        <a class="home" href="#">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                        <a class="fb-desktop" href="#">Fanpage</a>
+                        <a class="facebook" href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <section class="content" id="flipster">
+            <ul class="content-main">
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/cuocchienvutru.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/dautruong.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/dautruongvodich.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/dinhthanhthu.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/guildchien.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/lienminhdunggia.png" alt="">
+                    </a>
+                </li>
+                <li class="content-item">
+                    <a href="#" class="content-link">
+                        <img src="./assets/images/img-content/thelucbachu.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="content-bottom">
+            <li class="content-bottom__container">
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+                <li class="content-bottom-item"><a href=""></a></li>
+            </li>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.2/jquery.flipster.min.js" integrity="sha512-di0Ssl24gwoYxvNigeH7dnoK0QPApUBtaLKDRgIkWMm/0u6ey3jCd9GkpqsKqx2oMGQr2XfCGBdyo+8mVrh8Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('#flipster').flipster({
+                itemContainer: '.content-main',
+                itemSelector: '.content-item',
+                start: 3,
+                style: 'carousel',
+                spacing: -0.3,
+                click: true,
+                buttons: 'custom',
+                buttonPrev: '<img src="./assets/images/prev-btn.png" alt="">',
+                buttonNext: '<img src="./assets/images/next-btn.png" alt="">',
+                loop: true,
+            })
+        })
+    </script>
+</body>
+</html>
