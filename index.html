@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="https://st1.cmn.vn/games/truyen-thuyet/images/16x16.jpg?ver=3.8" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/16x16.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.2/jquery.flipster.css" integrity="sha512-YSNWyoPeQiu9Mgelm4Qhd0Ne+y35DPM9vocIjp24BZ+lOLZsKxMdExAXLhKNiBJ7j4NZUk4lGaAlNXxET4aiRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
+       <!--==============  HEADER ==============-->
         <header class="header">
             <div class="container">
                 <ul class="menu">
@@ -36,6 +42,8 @@
                 </ul>
             </div>
         </header>
+        <!--==============  END HEADER ==============-->
+        <!--==============  CONTENT ==============-->
         <section class="content" id="flipster">
             <ul class="content-main">
                 <li class="content-item">
@@ -75,35 +83,44 @@
                 </li>
             </ul>
         </section>
+        <!--==============  END CONTENT ==============-->
+        <!--==============  CONTENT BOTTOM ==============-->
         <section class="content-bottom">
-            <li class="content-bottom__container">
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-                <li class="content-bottom-item"><a href=""></a></li>
-            </li>
+            <ul class="content-bottom__container">
+                <li data-flip-nav="5" class="content-bottom-item">
+                    <div class="content-img img-3 active" idx="3">Đấu trường</div>
+                    <h2>Ngày 1</h2>
+                </li>
+                <li class="content-bottom-item" >
+                    <div class="content-img img-4" idx="4">Đấu trường vô địch</div>
+                    <h2>Ngày 8</h2>
+                </li>
+                <li class="content-bottom-item">
+                    <div class="content-img img-5" idx="5">Cuộc chiến vũ trụ</div>
+                    <h2>Ngày 9</h2>
+                </li>
+                <li class="content-bottom-item">
+                    <div class="content-img img-6" idx="6">Guild chiến</div>
+                    <h2>Ngày 15</h2>
+                </li>
+                <li class="content-bottom-item">
+                    <div class="content-img img-0" idx="0">Liên minh dũng giả</div>
+                    <h2>Ngày 30</h2>
+                </li>
+                <li class="content-bottom-item">
+                    <div class="content-img img-1" idx="1">Thế lực bá chủ chiến</div>
+                    <h2>Ngày 45</h2>
+                </li>
+                <li class="content-bottom-item">
+                    <div class="content-img img-2" idx="2">Đỉnh thánh trụ</div>
+                    <h2>Ngày 60</h2>
+                </li>
+            </ul>
         </section>
+        <!--==============  END CONTENT BOTTOM ==============-->
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.flipster/1.1.2/jquery.flipster.min.js" integrity="sha512-di0Ssl24gwoYxvNigeH7dnoK0QPApUBtaLKDRgIkWMm/0u6ey3jCd9GkpqsKqx2oMGQr2XfCGBdyo+8mVrh8Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function(){
-            $('#flipster').flipster({
-                itemContainer: '.content-main',
-                itemSelector: '.content-item',
-                start: 3,
-                style: 'carousel',
-                spacing: -0.3,
-                click: true,
-                buttons: 'custom',
-                buttonPrev: '<img src="./assets/images/prev-btn.png" alt="">',
-                buttonNext: '<img src="./assets/images/next-btn.png" alt="">',
-                loop: true,
-            })
-        })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

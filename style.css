@@ -1,27 +1,33 @@
-
-* {
+html {
     box-sizing: border-box;
   }
-
-body {
+  
+  * {
     margin: 0;
     padding: 0;
-}
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
 
 .wrapper {
-    margin-top: -16px;
     width: 100%;
     min-height: 100vh;
-    background: url('./assets/images/bg.jpg') no-repeat center top/100% 115%;
-
+    background: url('./assets/images/bg.jpg') no-repeat center top/100% 100%;
+    padding-bottom: 50px;
 }
 
+/*======== HEADER ======== */
 .header {
     width: 100%;
-    height: 100px;
+    height: 90px;
     padding: 0 30px;
     margin-bottom: 30px;
-    background: url('./assets/images/nav-bg.png') no-repeat center top;
+    background: url('./assets/images/nav-bg.png') no-repeat center bottom;
 }
 
 .container {
@@ -35,20 +41,22 @@ body {
     display: flex;
     justify-content: right;
     align-items: center;
-    /* position: relative; */
+    padding: 0;
+    margin: 0;
 }
 
 .menu-right {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 .menu-right a {
     list-style: none;
-    color: white;
-    font-size: 25px;
+    color: #fff8de;
+    font-size: 20px;
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color .5s ease-in-out;
 }
 
@@ -58,7 +66,7 @@ body {
 
 .logo {
     position: absolute;
-    top: 0%;
+    top: -1%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -69,11 +77,7 @@ body {
 }
 
 .home-desktop {
-   margin-right: 30px;
-}
-
-.fb-desktop {
-   
+   margin-right: 40px;
 }
 
 .home {
@@ -83,19 +87,98 @@ body {
 .facebook {
     display: none;
 }
+/*======== END HEADER ======== */
 
+/*======== CONTENT ======== */
 .content {
-    margin-top: 125px;
+    margin-top: 135px;
 }
 
 .content-main {
     display: flex;
 }
+/*======== END CONTENT ======== */
 
-.flipster__button{
-    top: 30px;
+/*======== CONTENT BUTTON ======== */
+.content-bottom {
+    background: url('./assets/images/update-timeline.png') no-repeat center left/contain;
+    height: 210px;
+    margin: 0 95px;
 }
 
+.content-bottom__container {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    height: 100%;
+}
+
+.content-bottom__container li {
+    width: 140px;
+    height: auto;
+    margin-right: 20px;
+    font-size: 16px;
+    color: white;
+    font-weight: 200;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content-bottom-item {
+    position: relative;
+}
+
+.content-bottom-item p {
+    position: absolute;
+    top: 42%;
+    left: 67px;
+    color: white;
+}
+
+.content-bottom-item h2 {
+    position: absolute;
+    top: 77%;
+    left: 22px;
+    color: #3f1f06;
+}
+
+.content-bottom-item a p {
+    transform: translate(-50%,-50%);
+}
+
+.content-img {
+    background: url('./assets/images/timeline-dot.png');
+    width: 140px;
+    height: 210px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 1px 1px 5px #c49374, 1px 1px 5px #bf6826;
+    padding: 0 30px;
+    transition: background .3s ease-in-out;
+    cursor: pointer;
+}
+
+.content-img:hover {
+    background: url('./assets/images/timeline-dot-hover.png');
+}
+
+.active {
+    background: url('./assets/images/timeline-dot-hover.png');
+}
+/*======== CONTENT BUTTON ======== */
+
+/*======== MEDIA QUERIES FOR MOBILE ======== */
 @media (max-width: 768px) {
     .wrapper {
        background: url('./assets//images/bg-mobile.jpg') no-repeat center top/100% 100%;
@@ -123,7 +206,6 @@ body {
     }
     .menu-right a {
         list-style: none;
-        color: white;
         font-size: 20px;
     }
     .home {
@@ -142,4 +224,8 @@ body {
     .content {
         margin-top: 30px;
     }
+    .content-bottom {
+        display: none;
+    }
 }
+/*======== END MEDIA QUERIES FOR MOBILE ======== */
