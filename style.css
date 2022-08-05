@@ -248,8 +248,8 @@ html {
 /*======== MEDIA QUERIES FOR TIMELINE UPDATE WIDTH <= 1300PX ======== */
 @media (max-width: 1300px) {
     .content-bottom {
-        background: url('./images/update-timeline.png') no-repeat center bottom left;
-        margin: 0 30px;
+        background: url('./images/update-timeline.png') no-repeat bottom left;
+        margin: 0 10px;
     }
     .content-bottom__container {
         display: none;
