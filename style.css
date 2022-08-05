@@ -5,6 +5,7 @@ html {
   * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   }
   
   *,
@@ -13,11 +14,10 @@ html {
     box-sizing: border-box;
   }
   
-
 .wrapper {
     width: 100%;
     min-height: 100vh;
-    background: url('./assets/images/bg.jpg') no-repeat center top/100% 100%;
+    background: url('./images/bg.jpg') no-repeat center top/100% 100%;
     padding-bottom: 50px;
 }
 
@@ -27,12 +27,11 @@ html {
     height: 90px;
     padding: 0 30px;
     margin-bottom: 30px;
-    background: url('./assets/images/nav-bg.png') no-repeat center bottom;
+    background: url('./images/nav-bg.png') no-repeat center bottom;
 }
 
 .container {
     height: 100%;
-    margin: 0 auto;
 }
 
 .menu {
@@ -41,8 +40,18 @@ html {
     display: flex;
     justify-content: right;
     align-items: center;
-    padding: 0;
-    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 
 .menu-right {
@@ -57,23 +66,11 @@ html {
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    transition: color .5s ease-in-out;
+    transition: color .3s ease-in-out;
 }
 
 .menu-right a:hover {
     color: rgb(117, 117, 11);
-}
-
-.logo {
-    position: absolute;
-    top: -1%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo img {
-    max-width: 100%;
-    height: auto;
 }
 
 .home-desktop {
@@ -97,11 +94,15 @@ html {
 .content-main {
     display: flex;
 }
+
+.flipster__button {
+    top: 40%;
+}
 /*======== END CONTENT ======== */
 
-/*======== CONTENT BUTTON ======== */
+/*======== CONTENT BOTTOM ======== */
 .content-bottom {
-    background: url('./assets/images/update-timeline.png') no-repeat center left/contain;
+    background: url('./images/update-timeline.png') no-repeat center left/contain;
     height: 210px;
     margin: 0 95px;
 }
@@ -128,30 +129,34 @@ html {
     text-align: center;
 }
 
-.content-bottom-item {
+.content-bottom__item {
     position: relative;
 }
 
-.content-bottom-item p {
+.content-bottom__item p {
     position: absolute;
     top: 42%;
     left: 67px;
     color: white;
 }
 
-.content-bottom-item h2 {
+.content-bottom__item h2 {
     position: absolute;
-    top: 77%;
+    top: 85%;
     left: 22px;
     color: #3f1f06;
 }
 
-.content-bottom-item a p {
+.content-bottom__item a p {
     transform: translate(-50%,-50%);
 }
 
+.active-update {
+    background: url('./images/timeline-dot-hover.png');
+}
+
 .content-img {
-    background: url('./assets/images/timeline-dot.png');
+    background: url('./images/timeline-dot.png');
     width: 140px;
     height: 210px;
     text-align: center;
@@ -170,18 +175,18 @@ html {
 }
 
 .content-img:hover {
-    background: url('./assets/images/timeline-dot-hover.png');
+    background: url('./images/timeline-dot-hover.png');
 }
 
 .active {
-    background: url('./assets/images/timeline-dot-hover.png');
+    background: url('./images/timeline-dot-hover.png');
 }
-/*======== CONTENT BUTTON ======== */
+/*======== END CONTENT BOTTOM ======== */
 
 /*======== MEDIA QUERIES FOR MOBILE ======== */
 @media (max-width: 768px) {
     .wrapper {
-       background: url('./assets//images/bg-mobile.jpg') no-repeat center top/100% 100%;
+       background: url('./images/bg-mobile.jpg') no-repeat center top/100% 100%;
     }
     .header {
        padding: 0;
@@ -217,6 +222,7 @@ html {
     }
     .home-desktop {
         display: none;
+        margin-right: 30px;
     }
     .fb-desktop {
         display: none;
@@ -228,4 +234,25 @@ html {
         display: none;
     }
 }
+
+@media (max-width: 400px) {
+    .menu {
+        padding: 0 10px;
+    }
+    .home {
+        margin-right: 20px
+    }
+}
 /*======== END MEDIA QUERIES FOR MOBILE ======== */
+
+/*======== MEDIA QUERIES FOR TIMELINE UPDATE WIDTH <= 1300PX ======== */
+@media (max-width: 1300px) {
+    .content-bottom {
+        background: url('./images/update-timeline.png') no-repeat center bottom left;
+        margin: 0 30px;
+    }
+    .content-bottom__container {
+        display: none;
+    }
+}
+/*======== END MEDIA QUERIES FOR TIMELINE UPDATE WIDTH <= 1300PX ======== */
